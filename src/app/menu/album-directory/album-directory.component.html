@@ -1,0 +1,37 @@
+<div id="container">
+  <table class="table table-hover table-light">
+    <thead>
+      <tr>
+        <!--<th scope="col"><input class="form-control" tpye="text" name="author" [(ngModel)]="author" (ngModelChange)="SearchAuthor()" placeholder="Autor"></th>-->
+        <th scope="col"><input class="form-control" tpye="text" name="author" [(ngModel)]="author" placeholder="Autor"></th>
+        <!-- <th scope="col"><input class="form-control" tpye="text" name="title" [(ngModel)]="title" (ngModelChange)="SearchTitle()" placeholder="Tytuł"></th>-->
+        <th scope="col"><input class="form-control" tpye="text" name="title" [(ngModel)]="title"  placeholder="Tytuł"></th>
+        <th scope="col"></th>
+        <th scope="col"><input class="form-control" tpye="text" name="year" [(ngModel)]="year" placeholder="Rok"></th>
+        <th scope="col"></th>
+      </tr>
+      <tr>
+        <th scope="col">Artysta</th>
+        <th scope="col">Tytuł</th>
+        <th scope="col">Wersja</th>
+        <th scope="col">Rok wydania</th>
+        <th scope="col">Dostawca</th>
+        <th scope="col"></th>
+      </tr>
+
+    </thead>
+    <tbody>
+      <tr *ngFor="let tmp of listOfAlbums | authorFilter: author | titleFilter: title | dataFilter: year">
+        <td>{{tmp.author}}</td>
+        <td>{{tmp.title}}</td>
+        <td>{{tmp.version}}</td>
+        <td>{{tmp.releaseData}}</td>
+        <td>{{tmp.provider}}</td>
+        <td>
+          <button type="button" class="btn btn-primary" routerLink="/menu/tracks" routerLinkActive="active" (click)="getTracks(tmp)">Utwory</button>
+        </td>
+      </tr>
+    </tbody>
+    <!--<pagination-controls (pageChange)="p = $event"></pagination-controls>-->
+  </table>
+</div>

@@ -1,0 +1,121 @@
+section {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  background: url("/assets/img/Nuta3.jpg");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+#panel {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 450px;
+  margin: 0 auto;
+  padding: 12px 0 0;
+  border: 2px solid rgb(189, 219, 226);
+  box-shadow: 7px 7px 60px #000;
+}
+#login {
+  width: 50%;
+  margin: 0 auto;
+  display: block;
+  text-align: center;
+  font-size: 35px;
+  color: #6b238E;
+}
+label {
+  display: block;
+  width: 310px;
+  padding: 10px 20px;
+  color: white;
+  font-size: 22px;
+  text-shadow: 0 0 2px black;
+  font-weight: bold;
+}
+
+#username,
+#password {
+  display: block;
+  width: 410px;
+  margin: 0 auto;
+  padding: 8px 5px;
+  border: 1px solid rgb(189, 219, 226);
+  font-size: 19px;
+  border-radius:5px;
+}
+
+#lower {
+  padding: 5px 20px;
+  margin-top: 11px;
+}
+
+#username:focus,
+#password:focus {
+  box-shadow: 0 0 10px rgb(189, 219, 226);
+}
+
+input[type="submit"] {
+  width: 80px;
+  padding: 6px 12px;
+  margin-bottom: 5px;
+  font-size: 15px;
+  border: 1px solid rgba(144, 186, 195, 0.83);
+  color: white;
+  position: relative;
+  left: 335px;
+  font-weight: bold;
+  background: #6b238E;
+  border-radius:5px;
+}
+
+.check {
+  display: inline;
+  float: none;
+  font-size: 13px;
+  padding: 5px;
+}
+
+#panel,
+input[type="submit"] {
+  border-radius: 2px;
+  outline: none;
+}
+
+.toast {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  max-width: 400px;
+  padding: 6px;
+  background: #cccccc;
+  color: #333333;
+  font-family: sans-serif;
+  text-align: center;
+  border: 1px solid #aaaaaa;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.2s, top 0.2s, visibility 0.2s;
+}
+
+.toast--visible {
+  top: 20px;
+  opacity: 1;
+  visibility: visible;
+}
+
+.toast--error {
+  background: #d50000;
+  border-color: #ba0000;
+  color: #ffffff;
+}
+
+
+

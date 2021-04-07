@@ -1,0 +1,13 @@
+<div>
+  <nav class="navbar navbar-dark bg-primary">
+    <a class="navbar-brand">Utwory muzyczne</a>
+    <form class="form-inline">
+      <button class="btn btn-primary my-2 my-sm-0" type="submit" routerLink="/menu/albums" outerLinkActive="active">Albumy</button>
+      <button class="btn btn-primary my-2 my-sm-0" type="submit" (click)="onLogout()">Wyloguj</button>
+    </form>
+  </nav>
+
+</div>
+<div>
+  <router-outlet></router-outlet>
+</div>

@@ -1,0 +1,38 @@
+<div class="row">
+  <div class="col-sm">
+    <table class="table table-hover table-light">
+      <thead>
+        <tr>
+          <th scope="col">Artysta</th>
+          <th scope="col">Tytuł</th>
+          <th scope="col">Rok wydania</th>
+          <th scope="col">Czas</th>
+          <th scope="col"></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let tmp of listOfTracks">
+          <td>{{tmp.trackAuthor}}</td>
+          <td>{{tmp.title}}</td>
+          <td>{{tmp.releaseData}}</td>
+          <td>{{tmp.duration}}</td>
+          <td>
+            <button type="button" class="btn btn-primary" (click)="onChange()">Szczegóły</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="col-sm" *ngIf="isVisible">
+    <div class="card card-body" style="{text-align: center;}">
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item"><h4>Kalog muzyczny:</h4></li>
+        <li class="list-group-item">Autor: {{service.currentAlbumId.author}}</li>
+        <li class="list-group-item">Tytuł: {{service.currentAlbumId.title}}</li>
+        <li class="list-group-item">Wersja: {{service.currentAlbumId.version}}</li>
+        <li class="list-group-item">Data wydania: {{service.currentAlbumId.releaseData}}</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
