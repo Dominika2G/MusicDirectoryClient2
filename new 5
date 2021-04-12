@@ -1,0 +1,6 @@
+Układ ma na celu umożliwić sterowanie silnikiem krokowym DC prądu stałego(mostek H).
+Umożliwia zmianę kierunku obrotu oraz szybkość obrotów. 
+Głównym elementem układu będzie STM32F407VG 
+Za obroty oraz prędkość odzpowedzialny będzie enkoder z przyciskiem - transport szczelinowy,
+Dane o prędkości i kierunku obrotów,zostaną przedstawione na wyświetlaczu - OLED 0,95 cala.
+Całosć ma być zasilana za pomocą zasilacza 13,5V.

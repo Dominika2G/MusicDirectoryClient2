@@ -1,5 +1,5 @@
 <div class="row">
-  <div class="col-sm">
+  <div class="col-sm" *ngIf="listOfTracks.length > 0 else warning">
     <table class="table table-hover table-light">
       <thead>
         <tr>
@@ -36,3 +36,12 @@
   </div>
 </div>
 
+<ng-template #warning>
+  <div id="container">
+    <div class="card">
+      <div class="card-body">
+        <p>Na chwilę obecną w albumie nie ma żadnych utworów.</p>
+      </div>
+    </div>
+  </div>
+</ng-template>
