@@ -1,11 +1,11 @@
 <section>
   <div id="div">
-    
+
     <!--<div class="toast toast--visible toast--error">Problem</div>-->
   </div>
   <div id="panel">
     <label id="login">Zaloguj się</label>
-    <form #form="ngForm" class="mb-4" autocomplete="off" (submit)="onSubmit(form)">
+     <form #form="ngForm" class="mb-4" autocomplete="off" (submit)="onSubmit(form)">
       <div class="form-group">
         <label>Nazwa:</label>
         <input type="text" id="username" class="form-control" #UserName="ngModel" name="UserName" [(ngModel)] = "formModel.UserName" required>
@@ -18,7 +18,7 @@
           <div id="lower">
             <input type="submit" value="Login" [disabled]="form.invalid">
         </div>
-      </div>  
+      </div>
     </form>
   </div>
 </section>

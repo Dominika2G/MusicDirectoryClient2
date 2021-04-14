@@ -8,7 +8,8 @@ export class UserService {
 
   constructor(private http: HttpClient) { }
 
-  readonly BaseURI = 'http://localhost:12605/api';
+  //readonly BaseURI = 'http://localhost:12605/api';
+  readonly BaseURI = 'https://musicdirectoryapi.azurewebsites.net/api';
 
   login(formData) {
     return this.http.post(this.BaseURI + '/Login', formData);

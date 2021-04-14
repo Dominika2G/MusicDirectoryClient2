@@ -10,8 +10,10 @@ export class MusicService {
 
   constructor(private http: HttpClient) { }
 
-  readonly BaseURI = 'http://localhost:12605/api';
-  currentAlbumId= {
+  //readonly BaseURI = 'http://localhost:12605/api';
+  readonly BaseURI = 'https://musicdirectoryapi.azurewebsites.net/api';
+
+  currentAlbumId = {
     id: 0,
     author: '',
     title: '',

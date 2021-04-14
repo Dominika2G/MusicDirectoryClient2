@@ -1,13 +1,11 @@
 {
   "ExpandedNodes": [
     "",
-    "\\e2e\\src",
     "\\src",
     "\\src\\app",
     "\\src\\app\\menu",
     "\\src\\app\\menu\\album-directory",
     "\\src\\app\\menu\\tracks"
   ],
-  "SelectedNode": "\\src\\styles.css",
   "PreviewInSolutionExplorer": false
 }

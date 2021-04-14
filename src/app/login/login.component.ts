@@ -3,7 +3,7 @@ import { NgForm } from '@angular/forms';
 import { Router } from '@angular/router';
 import { UserService } from '../shared/user.service';
 
- 
+
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -24,7 +24,7 @@ export class LoginComponent implements OnInit {
     UserName: '',
     Password: ''
   };
-  
+
   onSubmit(form: NgForm) {
     this.service.login(form.value).subscribe(
       (res: any) => {
@@ -32,8 +32,10 @@ export class LoginComponent implements OnInit {
         this.router.navigateByUrl('/menu/albums');
       },
       err => {
-        if (err.status == 400) {
+        if (err.status === 404) {
           Toast.show("Nazwa użytkownika lub hasło są niepoprawne", "error");
+        }else{
+          console.log(err);
         }
       }
     );
